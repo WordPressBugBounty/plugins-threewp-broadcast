@@ -669,7 +669,16 @@ trait broadcasting
 				{
 					// Protected = ignore.
 					if ( isset( $protected_field[ $meta_key ] ) )
+					{
+						$this->debug( 'Skipping protected field %s', $meta_key );
 						continue;
+					}
+
+					if ( $bcd->custom_fields()->blacklist_has( $meta_key ) )
+					{
+						$this->debug( 'Skipping blacklisted field %s', $meta_key );
+						continue;
+					}
 
 					if ( is_array( $meta_value ) )
 					{
