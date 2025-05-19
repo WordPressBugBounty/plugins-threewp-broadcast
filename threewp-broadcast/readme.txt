@@ -4,7 +4,7 @@ Donate link: https://broadcast.plainviewplugins.com
 License: GPLv3
 Requires at least: 4.6
 Requires PHP: 8.0
-Stable tag: 51.05
+Stable tag: 51.06
 Tags: multipost, sharing, duplicate, syndication, marketing
 Tested up to: 6.8
 
@@ -77,6 +77,7 @@ The following add-ons add support for the plugin after which they are named:
 * <a href="https://broadcast.plainviewplugins.com/addon/cm-tooltip-glossary/">CM Tooltip Glossary</a>
 * <a href="https://broadcast.plainviewplugins.com/addon/contact-form-7/">Contact Form 7</a>
 * <a href="https://broadcast.plainviewplugins.com/addon/create/">Create</a>
+* <a href="https://broadcast.plainviewplugins.com/addon/dear-flipbook/">Dear Flipbook</a> adds support for the Dear Flipbook PDF book plugin.
 * <a href="https://broadcast.plainviewplugins.com/addon/divi-builder/">Divi Builder</a>
 * <a href="https://broadcast.plainviewplugins.com/addon/download-manager/">Download Manager</a>
 * <a href="https://broadcast.plainviewplugins.com/addon/download-monitor/">Download Monitor</a>
@@ -369,6 +370,11 @@ This will broadcast all normal product settings: SKU, price, etc.
 If your products have variations, a product image gallery, you want to sync stock, you want to sync orders, need the attribute taxonomies to be synced, you'll be wanting the <a href="https://broadcast.plainviewplugins.com/addon/woocommerce/">WooCommerce add-on</a>.
 
 == Changelog ==
+
+= 51.06 20250519 =
+
+* New add-on: <a href="https://broadcast.plainviewplugins.com/addon/dear-flipbook/">Dear Flipbook</a> adds support for the <a href="https://wordpress.org/plugins/3d-flipbook-dflip-lite/">Dear Flipbook</a> PDF book plugin.
+* Dev: Do not show the current blog when using the add_blog_list_input() function.
 
 = 51.05 20250419 =
 
