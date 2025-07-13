@@ -429,14 +429,13 @@ trait attachments
 			}
 
 			$blog_id = get_current_blog_id();
-			if ( ! isset( $this->__dumped_attachment_guids[ $blog_id ] ) )
-				$this->__dumped_attachment_guids[ $blog_id ] = 0;
-
+			$guid_dump_col = $bcd->dynamic_data->collection( 'dumped_attachment_guids' )
+				->collection( $blog_id );
 			$md5 = md5( serialize( $guids ) );
-			if ( $this->__dumped_attachment_guids[ $blog_id ] != $md5 )
+			if ( ! $guid_dump_col->has( $md5 ) )
 			{
 				$this->debug( 'Attachment GUIDs on blog %s: %s', $blog_id, $guids );
-				$this->__dumped_attachment_guids[ $blog_id ] = $md5;
+				$guid_dump_col->set( $md5, true );
 			}
 
 			// Modify the captions.
