@@ -379,7 +379,15 @@ trait attachments
 			$this->debug( "Found attachment %s and we are looking for %s.", $attachment_post->post_name, $attachment_data->post->post_name );
 			// We've found an existing attachment. What to do with it...
 			$existing_action = $this->get_site_option( 'existing_attachments', 'use' );
-			$this->debug( 'Maybe copy attachment: The action for existing attachments is to %s.', $existing_action );
+			$existing_action_comment = '';
+
+			if ( $existing_action != 'use' )
+				$existing_action_comment = ' Unusual!';
+
+			$this->debug( 'Maybe copy attachment: The action for existing attachments is to %s%s.',
+				$existing_action,
+				$existing_action_comment,
+			);
 
 			$apply_existing_attachment_action = $this->new_action( 'apply_existing_attachment_action' );
 			$apply_existing_attachment_action->action = $existing_action;
