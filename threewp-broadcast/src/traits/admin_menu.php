@@ -80,11 +80,11 @@ trait admin_menu
 			if ( $pack_version != $bc_major_version )
 			{
 				$message = $this->p(
-					// Translators: add-on pack name, version number, version number.
-					__( 'Network admin! To ensure compatibility, please upgrade your version of the Broadcast %1$s add-on pack (%2$s) to match the major version of Broadcast itself: %$3s', 'threewp-broadcast' ),
-					$pack->get( 'name' ),
-					$constants[ $define ],
-					$bc_major_version
+						// Translators: add-on pack name, version number, version number.
+						__( 'Network admin! To ensure compatibility, please upgrade your version of the Broadcast %1$s add-on pack (%2$s) to match the major version of Broadcast itself: %3$s', 'threewp-broadcast' ),
+						$pack->get( 'name' ),
+						$constants[ $define ],
+						$bc_major_version
 				);
 
 				$r .= sprintf( '<div class="inline error notice">%s</div>', $message );
