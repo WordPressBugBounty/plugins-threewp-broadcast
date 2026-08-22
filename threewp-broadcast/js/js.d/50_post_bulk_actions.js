@@ -32,7 +32,7 @@
 				{
 					var post_ids = [];
 					// Get all selected rows
-					var $inputs = $( '#posts-filter tbody#the-list th.check-column input:checked' );
+					var $inputs = $( '#posts-filter tbody#the-list td.check-column input:checked' );
 					$.each( $inputs, function( index, item )
 					{
 						var $item = $( item );
