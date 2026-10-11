@@ -4,9 +4,9 @@ Donate link: https://broadcast.plainviewplugins.com
 License: GPLv3
 Requires at least: 6.2
 Requires PHP: 8.0
-Stable tag: 52.08
+Stable tag: 52.09
 Tags: multipost, sharing, duplicate, syndication, marketing
-Tested up to: 7.1
+Tested up to: 7.1.3
 
 Network content syndication made easy! Automatically share content by multiposting between multisite blogs.
 
@@ -371,6 +371,10 @@ This will broadcast all normal product settings: SKU, price, etc.
 If your products have variations, a product image gallery, you want to sync stock, you want to sync orders, need the attribute taxonomies to be synced, you'll be wanting the <a href="https://broadcast.plainviewplugins.com/addon/woocommerce/">WooCommerce add-on</a>.
 
 == Changelog ==
+
+= 52.09 20260822 =
+
+* Updated "tested up to" version.
 
 = 52.08 20260822 =
 

@@ -8,12 +8,12 @@ Domain Path:	/lang
 License:		GPLv3
 Plugin Name:	Broadcast
 Plugin URI:		https://broadcast.plainviewplugins.com/
-Version:		52.08
+Version:		52.09
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-DEFINE( 'THREEWP_BROADCAST_VERSION', 52.08 );
+DEFINE( 'THREEWP_BROADCAST_VERSION', 52.09 );
 
 require_once( __DIR__ . '/vendor/autoload.php' );
 
