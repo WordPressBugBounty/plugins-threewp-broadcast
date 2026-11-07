@@ -79,6 +79,10 @@ class api
 	**/
 	public function broadcast_children( $post_id, $blogs )
 	{
+		$post = get_post( $post_id );
+		if ( ! $post instanceof \WP_Post )
+			return false;
+
 		$bcd = \threewp_broadcast\broadcasting_data::make( $post_id, $blogs );
 		$bcd->high_priority = $this->high_priority;
 		apply_filters( 'threewp_broadcast_broadcast_post', $bcd );
@@ -95,15 +99,24 @@ class api
 	**/
 	public function broadcast_children_with_post( $post_id, $blogs )
 	{
-		$bc = ThreeWP_Broadcast();
-		$nested_broadcasting_data = $bc->broadcasting;
-		if ( count( $nested_broadcasting_data ) > 0 )
+		$previous_post = $_POST;
+		try
 		{
-			$latest_bcd = end( $nested_broadcasting_data );
-			$_POST = $latest_bcd->_POST;
-			$bc->debug( 'API: Broadcasting children with POST.' );
+			$bc = ThreeWP_Broadcast();
+			$nested_broadcasting_data = $bc->broadcasting;
+			if ( count( $nested_broadcasting_data ) > 0 )
+			{
+				$latest_bcd = end( $nested_broadcasting_data );
+				$_POST = $latest_bcd->_POST;
+				$bc->debug( 'API: Broadcasting children with POST.' );
+			}
+			return $this->broadcast_children( $post_id, $blogs );
 		}
-		return $this->broadcast_children( $post_id, $blogs );
+		finally
+		{
+			// Restore the caller's context, including after nested broadcasts or errors.
+			$_POST = $previous_post;
+		}
 	}
 
 	/**
@@ -312,6 +325,10 @@ The post should have been deleted by itself, but if you see it you can delete th
 	**/
 	public function update_children( $post_id, $new_blogs = [] )
 	{
+		$post = get_post( $post_id );
+		if ( ! $post instanceof \WP_Post )
+			return false;
+
 		$bcd = \threewp_broadcast\broadcasting_data::make( $post_id );
 		$bcd->high_priority = $this->high_priority;
 		foreach( $this->_get_post_children( $post_id ) as $blog_id )

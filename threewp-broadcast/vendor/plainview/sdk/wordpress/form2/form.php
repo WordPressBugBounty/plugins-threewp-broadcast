@@ -212,7 +212,7 @@ class form
 		@details	Created to prevent a conflict of POSTs when two forms are on the same page.
 		@since		2024-02-13 17:24:49
 	**/
-	public function is_posting( array $post = null )
+	public function is_posting( ?array $post = null )
 	{
 		if ( is_object( $this->nonce_input ) )
 		{
@@ -237,7 +237,7 @@ class form
 		@brief		Automatically check the nonce.
 		@since		2023-09-06 06:16:45
 	**/
-	public function post( array $post = null )
+	public function post( ?array $post = null )
 	{
 		parent::post( $post );
 		if ( ! is_object( $this->nonce_input ) )

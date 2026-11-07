@@ -3,7 +3,7 @@
         'name' => 'plainview/threewp_broadcast',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '92f3478e8965d567e9400fcaa38f6bb0b47c5141',
+        'reference' => 'fd2d5b71346d0ab44bdea70e50e697f9fe956d37',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'plainview/sdk' => array(
-            'pretty_version' => '20260121',
-            'version' => '20260121',
-            'reference' => '823ea59b877f46849d3d8cd4b5544e8e26d7cda1',
+            'pretty_version' => '20261107',
+            'version' => '20261107',
+            'reference' => 'beaff5abb3538505133f02400f2f21c818c84508',
             'type' => 'library',
             'install_path' => __DIR__ . '/../plainview/sdk',
             'aliases' => array(),
@@ -22,7 +22,7 @@
         'plainview/threewp_broadcast' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '92f3478e8965d567e9400fcaa38f6bb0b47c5141',
+            'reference' => 'fd2d5b71346d0ab44bdea70e50e697f9fe956d37',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

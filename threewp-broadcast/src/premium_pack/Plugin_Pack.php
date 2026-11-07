@@ -87,6 +87,8 @@ abstract class Plugin_Pack
 	public function threewp_broadcast_prepare_meta_box( $action )
 	{
 		$status = $this->edd_get_cached_license_status();
+		if ( ! $status )
+			return;
 		if (  $status->license != 'valid' )
 			return;
 		$expiration = strtotime( $status->expires );
