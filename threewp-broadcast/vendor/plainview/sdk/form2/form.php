@@ -399,7 +399,7 @@ class form
 		@return		this		This.
 		@since		2013
 	**/
-	function post( array $post = null )
+	function post( ?array $post = null )
 	{
 		$this->post = ( $post === null ? $_POST : $post );
 		$this->use_post_value();

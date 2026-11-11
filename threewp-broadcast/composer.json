@@ -35,6 +35,6 @@
 		}
 	],
 	"require": {
-		"plainview/sdk": "20261107"
+		"plainview/sdk": "20261110"
 	}
 }

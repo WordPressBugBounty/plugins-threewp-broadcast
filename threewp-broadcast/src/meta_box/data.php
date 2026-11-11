@@ -8,6 +8,7 @@ use \plainview\sdk_broadcast\collections\collection;
 	@brief		The data class that is passed around when creating the broadcast meta box.
 	@since		20130928
 **/
+#[\AllowDynamicProperties]
 class data
 {
 	/**

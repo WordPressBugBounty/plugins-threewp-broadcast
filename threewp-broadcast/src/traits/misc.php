@@ -35,7 +35,7 @@ trait misc
 	**/
 	public static function collection( $items = [] )
 	{
-		return new \plainview\sdk_broadcast\collections\Collection( $items );
+		return new \threewp_broadcast\collection( $items );
 	}
 
 	/**
